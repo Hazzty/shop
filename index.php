@@ -3,6 +3,7 @@
 header("Content-type: text/html; charset=utf-8");
 session_start();
 $_SESSION['cart'] = array();
+/*fiskmås*/
 ?>
 <html lang="sv">
 
