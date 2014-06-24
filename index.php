@@ -24,8 +24,8 @@ $_SESSION['cart'] = array();
 	
 		<div class="search">
 		<h2>What are you looking for?</h2>
-			<form>
-				<input type="text" placeholder="Search..."/>
+			<form action="includes/search.php" method="get" accept-charset="UTF-8">
+				<input type="text" placeholder="Search..." name="s"/>
 				<input type="submit" />
 			</form>
 		</div>
