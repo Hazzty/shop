@@ -3,13 +3,27 @@
 header("Content-type: text/html; charset=utf-8");
 session_start();
 $_SESSION['cart'] = array();
-/*fiskamåsarna*/
+include "includes/dbconnect.php";
 ?>
 <html lang="sv">
 
 <head>
 	<title>Shop</title>
 	<link href="css/css.css" rel="stylesheet" type="text/css"/>
+	 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /> 
+		<script type ="text/javascript" src="js/jquery-2.1.1.min.js"> </script>
+		<script type ="text/javascript" src="js/jqueryui/jquery-ui.min.js"> </script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$("#searchbar").autocomplete({
+			source: "functions/search.php",
+			minLength: 1
+	});
+
+
+});
+</script>
 </head>
 
 <body>
@@ -24,8 +38,8 @@ $_SESSION['cart'] = array();
 	
 		<div class="search">
 		<h2>What are you looking for?</h2>
-			<form action="includes/search.php" method="get" accept-charset="UTF-8">
-				<input type="text" placeholder="Search..." name="s"/>
+			<form action="search.php" method="get" accept-charset="UTF-8">
+				<input type="text" placeholder="Search..." name="s" id="searchbar"/>
 				<input type="submit" />
 			</form>
 		</div>

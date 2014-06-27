@@ -15,7 +15,6 @@ width: 984px;
 margin-left: auto;
 margin-right: auto;
 height: 500px;
-border: 1px black solid;
 }
 
 .banner
@@ -89,4 +88,11 @@ margin: 0 auto;
 {
 margin-bottom: 0;
 margin-top: 5px;
+}
+
+.item
+{
+position: relative;
+width: 800px;
+background-color: red;
 }
